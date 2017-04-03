@@ -16,6 +16,8 @@ var startedConvolution = false
  * Note:
     This Playground uses quadratic-sized matrices which can be described by an one-dimensional Array
  */
+//#-code-completion(bookauxiliarymodule, hide)
+//#-code-completion(identifier, hide, startedConvolution)
 typealias Image = [UIColor]
 
 let 🦄: Image = [
