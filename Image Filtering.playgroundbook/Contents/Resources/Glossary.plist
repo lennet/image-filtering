@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Terms</key>
+	<dict>
+		<key>Laplace operator</key>
+		<dict>
+			<key>Definition</key>
+			<string>The Laplace operator is the sum of the second partial derivative of a function</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Edge%20detection/Laplacian%20of%20Gaussian</string>
+				<key>Title</key>
+				<string>Laplacian of Gaussian</string>
+			</dict>
+		</dict>
+		<key>Gaussian distribution</key>
+		<dict>
+			<key>Definition</key>
+			<string>The Gaussian distribution function or also called normal distribution function is an important function in the probability theory. Its characteristics are that is symmetrically centered around the mean value (usually 0).</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Blurring%20&amp;%20Smoothing/Gaussian%20filter</string>
+				<key>Title</key>
+				<string>Gaussian filter</string>
+			</dict>
+		</dict>
+		<key>Gaussian blur</key>
+		<dict>
+			<key>Definition</key>
+			<string>The Gaussian blur is a blurring filter which uses an implementation of the Gaussian distribution function which has it&apos;s biggest values in the center and decreases depending on the standard deviation variable sigma</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Blurring%20&amp;%20Smoothing/Gaussian%20filter</string>
+				<key>Title</key>
+				<string>Gaussian filter</string>
+			</dict>
+		</dict>
+		<key>Laplacian of Gaussian</key>
+		<dict>
+			<key>Definition</key>
+			<string>The Laplacian of Gaussian is a combination of the Laplacian operator and Gaussian distribution functions which detect points/ edges in all directions</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Edge%20detection/Laplacian%20of%20Gaussian</string>
+				<key>Title</key>
+				<string>Laplacian of Gaussian</string>
+			</dict>
+		</dict>
+		<key>Edge detector</key>
+		<dict>
+			<key>Definition</key>
+			<string>The goal of edge detectors is to detect edges and features in an image which can be used for Machine Learning, image segmentation or other computer vision related problems</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Edge%20detection/Sobel%20operator</string>
+				<key>Title</key>
+				<string>Sobel operator</string>
+			</dict>
+		</dict>
+		<key>Sobel operator</key>
+		<dict>
+			<key>Definition</key>
+			<string>The Sobel operator is an edge detector which calculates the derivation of the intensity values in a given direction </string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Edge%20detection/Sobel%20operator</string>
+				<key>Title</key>
+				<string>Sobel operator</string>
+			</dict>
+		</dict>
+		<key>Sharpener filter</key>
+		<dict>
+			<key>Definition</key>
+			<string>The Sharpener filter enhances the difference the current pixel, and it&apos;s adjacent pixels which increase the perceived sharpness</string>
+		</dict>
+		<key>Emboss filter</key>
+		<dict>
+			<key>Definition</key>
+			<string>The Emboss filter creates an embossing effect by replacing each pixel with highlight or shadow, depending on derivation of the current region</string>
+		</dict>
+		<key>Box filter</key>
+		<dict>
+			<key>Definition</key>
+			<string>The Box filter calculates the average value of the neighboring pixels which blurs the image. The number of pixels that are taken into account depends on  the filter size  </string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Blurring%20&amp;%20Smoothing/Box-Filter</string>
+				<key>Title</key>
+				<string>Box-Filter</string>
+			</dict>
+		</dict>
+		<key>Linearity</key>
+		<dict>
+			<key>Definition</key>
+			<string>A function is linear if it satisfies Additivity and Homogeneity. Regarding filters, each filter which doesn&apos;t rely on spatial or time information is linear </string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Introduction/Images,%20Filters%20&amp;%20Convolution</string>
+				<key>Title</key>
+				<string>Images, Filters &amp; Convolution</string>
+			</dict>
+		</dict>
+		<key>Histogram</key>
+		<dict>
+			<key>Definition</key>
+			<string>A histogram is a graphic representation of the frequency distribution of color intensities (0-255) divided into the three channels red, green and blue</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Blurring%20&amp;%20Smoothing/Box%20filter</string>
+				<key>Title</key>
+				<string>Box filter</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

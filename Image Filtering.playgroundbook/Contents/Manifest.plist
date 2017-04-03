@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ImageReference</key>
+	<string>Private/cover.png</string>
+	<key>SwiftVersion</key>
+	<string>3.1</string>
+	<key>Version</key>
+	<string>1.0</string>
+	<key>ContentVersion</key>
+	<string>1.0</string>
+	<key>Name</key>
+	<string>Image Filtering</string>
+	<key>ContentIdentifier</key>
+	<string>com.leonardthomas.imagefilter</string>
+	<key>DeploymentTarget</key>
+	<string>ios10.0</string>
+	<key>Chapters</key>
+	<array>
+		<string>Chapter1.playgroundchapter</string>
+		<string>Chapter2.playgroundchapter</string>
+		<string>Chapter3.playgroundchapter</string>
+		<string>Chapter4.playgroundchapter</string>
+		<string>Chapter5.playgroundchapter</string>
+	</array>
+</dict>
+</plist>
