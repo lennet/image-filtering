@@ -61,8 +61,8 @@ as [Float] // Workaround to improve the compile time. Radar filed: https://bugs.
 /// Starts the convolution 🙃
 func startConvolution() {
     startedConvolution = true
-    let hexValues = 🦄.map{PlaygroundValue.integer($0.hexValue)}
-    let kernelValues = filter.map{PlaygroundValue.floatingPoint(Double($0))}
+    let hexValues = 🦄.asHexArray.map{ PlaygroundValue.integer($0) }
+    let kernelValues = filter.map{ PlaygroundValue.floatingPoint(Double($0)) }
     
     let dict = PlaygroundValue.dictionary([Constants.imageKey: PlaygroundValue.array(hexValues),
                                            Constants.kernelKey: PlaygroundValue.array(kernelValues)])

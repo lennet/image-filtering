@@ -28,3 +28,11 @@ extension UIColor {
     }
     
 }
+
+extension Array where Element == UIColor {
+
+    public var asHexArray: [Int] {
+        return self.map{ $0.hexValue }
+    }
+    
+}
