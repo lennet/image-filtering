@@ -1,0 +1,42 @@
+{
+	"documents": [
+		{
+			"previewImageURLs": [],
+			"bannerImageURL": "Image%20Filtering.playgroundbook/Contents/Resources/Private/cover.png",
+			"thumbnailURL": "Image%20Filtering.playgroundbook/Contents/Resources/Private/cover.png",
+			"subtitle": "Learn about image filtering",
+			"description": "Lorem ipsum",
+			"publishedDate": "2017-05-29T12:00:00+00:00",
+			"url": "https://github.com/lennet/image-filtering/releases/download/1.0/Image.Filtering.playgroundbook.zip",
+			"additionalInformation": [
+				{
+					"name": "Publisher:",
+					"value": "Leonard Thomas"
+				},
+				{
+					"name": "Version:",
+					"value": "1.0"
+				},
+				{
+					"type": "date",
+					"name": "Released:",
+					"value": "2017-05-29T12:00:00+00:00"
+				},
+				{
+					"name": "Sprachen:",
+					"value": "English"
+				}
+			],
+			"title": "Image Filtering",
+			"contentVersion": "1.0",
+			"lastUpdatedDate": "2017-05-29T12:00:00+00:00",
+			"contentIdentifier": "com.leonardthomas.imagefilter",
+			"sha512": "e7a1280d40137843f07f1794f8d12198dbfd65d3c0763cc988f5eb76ae2de8da"
+		}
+	],
+	"publisherName": "Leonard Thomas",
+	"title": "Leonard Thomas",
+	"formatVersion": "1.0",
+	"feedIdentifier": "com.leonardthomas",
+	"contactURL": "mailto:leo.thomas@me.com"
+}
