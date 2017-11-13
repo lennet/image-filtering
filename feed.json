@@ -20,7 +20,7 @@
 				{
 					"type": "date",
 					"name": "Released:",
-					"value": "2017-05-29T12:00:00+00:00"
+					"value": "2017-11-14T12:00:00+00:00"
 				},
 				{
 					"name": "Languages:",
@@ -29,7 +29,7 @@
 			],
 			"title": "Image Filtering",
 			"contentVersion": "1.0",
-			"lastUpdatedDate": "2017-05-29T12:00:00+00:00",
+			"lastUpdatedDate": "2017-11-14T12:00:00+00:00",
 			"contentIdentifier": "com.leonardthomas.imagefilter",
 			"sha512": "3a17d593d7ba63c737c476716e39871ff44c1f9b71810cde36a466d0487af5098dba48339341ca60c2bf16e17ab2ea6d6ff2d84a42d3832aa9720b4c29b081a7"
 		}
