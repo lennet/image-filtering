@@ -1,4 +1,5 @@
-import UIKit
+import Foundation
+import CoreGraphics
 
 let pi: Float = Float(CGFloat.pi)
 

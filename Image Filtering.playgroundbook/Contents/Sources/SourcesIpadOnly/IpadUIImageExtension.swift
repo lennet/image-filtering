@@ -38,7 +38,7 @@ extension UIImage {
         
         let textureLoader = MTKTextureLoader(device: device)
         
-        guard let texture = try? textureLoader.newTexture(with: cgImage, options: nil) else {
+        guard let texture = try? textureLoader.newTexture(cgImage: cgImage, options: nil) else {
             PlaygroundPageSessionManager.shared.showErrorMessage(hint: "Oops! Something went wrong. Please start the convolution again", solution: nil)
             fatalError("Oops! Something went wrong. Please start the convolution again")
         }
@@ -49,9 +49,15 @@ extension UIImage {
             height: texture.height,
             mipmapped: false)
         
-        let destination: MTLTexture = device.makeTexture(descriptor: descriptor)
+        guard let destination: MTLTexture = device.makeTexture(descriptor: descriptor) else {
+            PlaygroundPageSessionManager.shared.showErrorMessage(hint: "Oops! Something went wrong. Please start the convolution again", solution: nil)
+            fatalError("Oops! Something went wrong. Please start the convolution again")
+        }
         
-        let commandBuffer = queue.makeCommandBuffer()
+        guard let commandBuffer = queue?.makeCommandBuffer() else {
+            PlaygroundPageSessionManager.shared.showErrorMessage(hint: "Oops! Something went wrong. Please start the convolution again", solution: nil)
+            fatalError("Oops! Something went wrong. Please start the convolution again")
+        }
         
         shader.encode(commandBuffer: commandBuffer, sourceTexture: texture, destinationTexture: destination)
         
@@ -97,3 +103,5 @@ extension UIImage {
         self.init(cgImage: image)
     }
 }
+
+

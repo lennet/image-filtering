@@ -31,3 +31,5 @@ extension CompareImagesViewController: PlaygroundLiveViewMessageHandler {
 
     }
 }
+
+

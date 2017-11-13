@@ -48,9 +48,9 @@ A *filter* or also called *kernel* is a matrix that describes a transformation p
  2. If all values sum to one, the brightness doesn't change
  3. If the sum of all values are greater than one, the image gets brighter and darker if the sum is less than one
 */
-typealias Kernel = [Float]
+typealias aKernel = [Float]
 
-let filter: Kernel = [/*#-editable-code*/1/9/*#-end-editable-code*/,/*#-editable-code*/1/9/*#-end-editable-code*/,/*#-editable-code*/1/9/*#-end-editable-code*/,
+let filter: aKernel = [/*#-editable-code*/1/9/*#-end-editable-code*/,/*#-editable-code*/1/9/*#-end-editable-code*/,/*#-editable-code*/1/9/*#-end-editable-code*/,
                       /*#-editable-code*/1/9/*#-end-editable-code*/,/*#-editable-code*/1/9/*#-end-editable-code*/,/*#-editable-code*/1/9/*#-end-editable-code*/,
                       /*#-editable-code*/1/9/*#-end-editable-code*/,/*#-editable-code*/1/9/*#-end-editable-code*/,/*#-editable-code*/1/9/*#-end-editable-code*/]
 

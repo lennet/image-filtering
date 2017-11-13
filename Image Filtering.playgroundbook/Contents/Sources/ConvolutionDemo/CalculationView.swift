@@ -19,7 +19,7 @@ public struct CalculationStep {
 extension UIColor {
     
     public convenience init(value: RGBValue) {
-        self.init(colorLiteralRed: value.red, green: value.green, blue: value.blue, alpha: 1)
+        self.init(red: CGFloat(value.red), green: CGFloat(value.green), blue: CGFloat(value.blue), alpha: 1)
     }
     
 }
@@ -73,8 +73,8 @@ public class CalculationView: UIView {
         return max(10, fontSize)
     }
     
-    var stringAttributes: [String: Any] {
-        return [NSFontAttributeName: font]
+    var stringAttributes: [NSAttributedStringKey: Any] {
+        return [.font: font]
     }
     
     var maxX: CGFloat = 0

@@ -5,7 +5,7 @@
 	<key>ImageReference</key>
 	<string>Private/cover.png</string>
 	<key>SwiftVersion</key>
-	<string>3.1</string>
+	<string>4.0</string>
 	<key>Version</key>
 	<string>1.0</string>
 	<key>ContentVersion</key>
@@ -15,7 +15,7 @@
 	<key>ContentIdentifier</key>
 	<string>com.leonardthomas.imagefilter</string>
 	<key>DeploymentTarget</key>
-	<string>ios10.0</string>
+	<string>ios11.0</string>
 	<key>Chapters</key>
 	<array>
 		<string>Chapter1.playgroundchapter</string>

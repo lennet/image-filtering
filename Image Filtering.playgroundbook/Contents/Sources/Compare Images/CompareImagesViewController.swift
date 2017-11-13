@@ -1,16 +1,16 @@
 import UIKit
 
 public class CompareImagesViewController: UIViewController {
-    
+
     var stackView: UIStackView!
-    
+
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         guard stackView == nil else { return }
-        
+
         view.backgroundColor = .clear
-        
+
         stackView = UIStackView()
         stackView.backgroundColor = .white
         
@@ -21,17 +21,17 @@ public class CompareImagesViewController: UIViewController {
         stackView.distribution = .fillEqually
         stackView.axis = .horizontal
         stackView.spacing = 5
-        
+
         view.addSubview(stackView)
     }
-    
+
     public func addImage(image: UIImage) {
         let showImageViewController = ShowImageViewController(image: image)
         addChildViewController(showImageViewController)
         stackView.addArrangedSubview(showImageViewController.view)
         showImageViewController.didMove(toParentViewController: self)
     }
-    
+
     public func reset() {
         childViewControllers.forEach{
             stackView.removeArrangedSubview($0.view)
@@ -39,5 +39,6 @@ public class CompareImagesViewController: UIViewController {
             $0.removeFromParentViewController()
         }
     }
-    
+
 }
+

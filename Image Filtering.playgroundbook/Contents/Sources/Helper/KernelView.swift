@@ -33,7 +33,7 @@ public class KernelView: DrawingView {
                 if value > 0 {
                     return UIColor(white: 0, alpha: CGFloat(value / maxValue+abs(min)))
                 } else {
-                    return UIColor(colorLiteralRed: 1, green: 0, blue: 0, alpha: value / min + (abs(maxValue) * -1))
+                    return UIColor(red: 1, green: 0, blue: 0, alpha: CGFloat(value / min + (abs(maxValue) * -1)))
                     
                 }
             }
