@@ -7,7 +7,7 @@
 			"subtitle": "Learn about image filtering",
 			"description": "Many people think that digital signal processing is very complicated and quickly get deterred by mathematical formulas.  This  Playgroundbook shows that the fundamental concepts of DSP are way easier than they might look like with the example of convolving images with filter kernels.",
 			"publishedDate": "2017-11-14T12:00:00+00:00",
-			"url": "https://github.com/lennet/image-filtering/releases/download/1.0/Image.Filtering.playgroundbook.zip",
+			"url": "https://github.com/lennet/image-filtering/releases/download/1.0.1/Image.Filtering.playgroundbook.zip",
 			"additionalInformation": [
 				{
 					"name": "Publisher:",
@@ -28,7 +28,7 @@
 				}
 			],
 			"title": "Image Filtering",
-			"contentVersion": "1.0",
+			"contentVersion": "1.0.1",
 			"lastUpdatedDate": "2017-11-14T12:00:00+00:00",
 			"contentIdentifier": "com.leonardthomas.imagefilter",
 			"sha512": "3a17d593d7ba63c737c476716e39871ff44c1f9b71810cde36a466d0487af5098dba48339341ca60c2bf16e17ab2ea6d6ff2d84a42d3832aa9720b4c29b081a7"
@@ -36,7 +36,7 @@
 	],
 	"publisherName": "Leonard Thomas",
 	"title": "Leonard Thomas",
-	"formatVersion": "1.0",
+	"formatVersion": "1.0.1",
 	"feedIdentifier": "com.leonardthomas",
 	"contactURL": "mailto:leo.thomas@me.com"
 }
