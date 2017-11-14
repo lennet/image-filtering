@@ -15,7 +15,7 @@
 				},
 				{
 					"name": "Version:",
-					"value": "1.0"
+					"value": "1.0.1"
 				},
 				{
 					"type": "date",
@@ -36,7 +36,7 @@
 	],
 	"publisherName": "Leonard Thomas",
 	"title": "Leonard Thomas",
-	"formatVersion": "1.0.1",
+	"formatVersion": "1.0",
 	"feedIdentifier": "com.leonardthomas",
 	"contactURL": "mailto:leo.thomas@me.com"
 }
