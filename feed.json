@@ -24,14 +24,19 @@
 				},
 				{
 					"name": "Languages:",
-					"value": "English"
+					"value": "English",
 				}
 			],
+			"previewImageURLs": [
+					"Screenshots/Screenshot1.png",
+					"Screenshots/Screenshot2.png"
+			],
 			"title": "Image Filtering",
-			"contentVersion": "1.0.1",
+			"contentVersion": "1.0.2",
 			"lastUpdatedDate": "2017-11-14T12:00:00+00:00",
 			"contentIdentifier": "com.leonardthomas.imagefilter",
-			"sha512": "3a17d593d7ba63c737c476716e39871ff44c1f9b71810cde36a466d0487af5098dba48339341ca60c2bf16e17ab2ea6d6ff2d84a42d3832aa9720b4c29b081a7"
+			"sha512": "8a4119991fabdf6e2399aec359b4da1ba157e683b32513ee93c2ba2bf1b9c73a24fb6f5d36da13fd4459e5e4b5f884802c71a497bd74cfe1757acbf97caf88af",
+			"difficultyLevel" : "advanced"
 		}
 	],
 	"publisherName": "Leonard Thomas",
