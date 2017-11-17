@@ -12,7 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let image = #imageLiteral(resourceName: "Camel.jpg")
+        
+        let result = image.convolve(with: .gaussian(size: 1001, sigma: 101/6))
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -33,12 +33,14 @@ extension UIImage {
         let kernelSize = Int(ceil(sqrt(Double(kernel.count))))
         
         let shader = MPSImageConvolution(device: device, kernelWidth: kernelSize, kernelHeight: kernelSize, weights: kernel)
-        
         shader.edgeMode = .zero
         
         let textureLoader = MTKTextureLoader(device: device)
         
-        guard let texture = try? textureLoader.newTexture(cgImage: cgImage, options: nil) else {
+        let texture: MTLTexture
+        do {
+            texture = try textureLoader.newTexture(cgImage: cgImage, options: nil)
+        } catch {
             PlaygroundPageSessionManager.shared.showErrorMessage(hint: "Oops! Something went wrong. Please start the convolution again", solution: nil)
             fatalError("Oops! Something went wrong. Please start the convolution again")
         }
@@ -63,6 +65,17 @@ extension UIImage {
         
         commandBuffer.commit()
         commandBuffer.waitUntilCompleted()
+        
+        if let error = commandBuffer.error as? MTLCommandBufferError {
+            switch error.code {
+            case .timeout:
+                PlaygroundPageSessionManager.shared.showErrorMessage(hint: "Oops! The execution of the convolution took too long. Please select a smaller kernel size or a smaller image", solution: nil)
+                fatalError("Oops! The execution of the convolution took too long. Please select a smaller kernel size or a smaller image")
+            default:
+                PlaygroundPageSessionManager.shared.showErrorMessage(hint: "Oops! Something went wrong. Please start the convolution again", solution: nil)
+                fatalError("Oops! Something went wrong. Please start the convolution again")
+            }
+        }
         
         return  UIImage(texture: destination)
     }

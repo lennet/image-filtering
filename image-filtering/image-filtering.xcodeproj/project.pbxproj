@@ -29,7 +29,6 @@
 		98706D141FBF08E300620A26 /* ConvolutionEquation.png in Resources */ = {isa = PBXBuildFile; fileRef = 98706CC21FBF08E200620A26 /* ConvolutionEquation.png */; };
 		98706D171FBF08E300620A26 /* Manifest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98706CC61FBF08E200620A26 /* Manifest.plist */; };
 		98706D181FBF08E300620A26 /* Manifest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98706CC91FBF08E200620A26 /* Manifest.plist */; };
-		98706D1B1FBF08E300620A26 /* Unicorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 98706CCD1FBF08E200620A26 /* Unicorn.png */; };
 		98706D1C1FBF08E300620A26 /* Glossary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98706CCE1FBF08E200620A26 /* Glossary.plist */; };
 		98706D1D1FBF08E300620A26 /* Camel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 98706CCF1FBF08E200620A26 /* Camel.jpg */; };
 		98706D1E1FBF08E300620A26 /* Akropolis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 98706CD01FBF08E200620A26 /* Akropolis.jpg */; };
@@ -65,7 +64,7 @@
 		98706D3C1FBF08E300620A26 /* CompareImagesViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706CF51FBF08E200620A26 /* CompareImagesViewControllerExtension.swift */; };
 		98706D3D1FBF08E300620A26 /* PlaygroundStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706CF61FBF08E200620A26 /* PlaygroundStore.swift */; };
 		98706D3E1FBF08E300620A26 /* PlaygroundPageSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706CF71FBF08E200620A26 /* PlaygroundPageSessionManager.swift */; };
-		98706D3F1FBF08E300620A26 /* IpadUIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706CF81FBF08E200620A26 /* IpadUIImageExtension.swift */; };
+		98706D3F1FBF08E300620A26 /* UIImage+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706CF81FBF08E200620A26 /* UIImage+Metal.swift */; };
 		98706D401FBF08E300620A26 /* PlaygroundLiveViewSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706CF91FBF08E200620A26 /* PlaygroundLiveViewSessionManager.swift */; };
 		98706D411FBF08E300620A26 /* HistogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706CFB1FBF08E200620A26 /* HistogramViewController.swift */; };
 		98706D421FBF08E300620A26 /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706CFC1FBF08E200620A26 /* HistogramView.swift */; };
@@ -73,6 +72,7 @@
 		98706D4F1FBF090800620A26 /* PlaygroundSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98706D481FBF090800620A26 /* PlaygroundSupport.framework */; };
 		98706D501FBF090800620A26 /* PlaygroundSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98706D481FBF090800620A26 /* PlaygroundSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98706D561FBF091C00620A26 /* PlaygroundPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706D551FBF091C00620A26 /* PlaygroundPage.swift */; };
+		98706D591FBF653000620A26 /* Unicorn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 98706D581FBF653000620A26 /* Unicorn.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,7 +137,6 @@
 		98706CC91FBF08E200620A26 /* Manifest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Manifest.plist; sourceTree = "<group>"; };
 		98706CCA1FBF08E200620A26 /* Contents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		98706CCB1FBF08E200620A26 /* LiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
-		98706CCD1FBF08E200620A26 /* Unicorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Unicorn.png; sourceTree = "<group>"; };
 		98706CCE1FBF08E200620A26 /* Glossary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Glossary.plist; sourceTree = "<group>"; };
 		98706CCF1FBF08E200620A26 /* Camel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Camel.jpg; sourceTree = "<group>"; };
 		98706CD01FBF08E200620A26 /* Akropolis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Akropolis.jpg; sourceTree = "<group>"; };
@@ -173,7 +172,7 @@
 		98706CF51FBF08E200620A26 /* CompareImagesViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareImagesViewControllerExtension.swift; sourceTree = "<group>"; };
 		98706CF61FBF08E200620A26 /* PlaygroundStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundStore.swift; sourceTree = "<group>"; };
 		98706CF71FBF08E200620A26 /* PlaygroundPageSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundPageSessionManager.swift; sourceTree = "<group>"; };
-		98706CF81FBF08E200620A26 /* IpadUIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpadUIImageExtension.swift; sourceTree = "<group>"; };
+		98706CF81FBF08E200620A26 /* UIImage+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Metal.swift"; sourceTree = "<group>"; };
 		98706CF91FBF08E200620A26 /* PlaygroundLiveViewSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundLiveViewSessionManager.swift; sourceTree = "<group>"; };
 		98706CFB1FBF08E200620A26 /* HistogramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistogramViewController.swift; sourceTree = "<group>"; };
 		98706CFC1FBF08E200620A26 /* HistogramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
@@ -181,6 +180,7 @@
 		98706D4A1FBF090800620A26 /* PlaygroundSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaygroundSupport.h; sourceTree = "<group>"; };
 		98706D4B1FBF090800620A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98706D551FBF091C00620A26 /* PlaygroundPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundPage.swift; sourceTree = "<group>"; };
+		98706D581FBF653000620A26 /* Unicorn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unicorn.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -461,7 +461,7 @@
 		98706CCC1FBF08E200620A26 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				98706CCD1FBF08E200620A26 /* Unicorn.png */,
+				98706D581FBF653000620A26 /* Unicorn.jpg */,
 				98706CCE1FBF08E200620A26 /* Glossary.plist */,
 				98706CCF1FBF08E200620A26 /* Camel.jpg */,
 				98706CD01FBF08E200620A26 /* Akropolis.jpg */,
@@ -553,7 +553,7 @@
 				98706CF51FBF08E200620A26 /* CompareImagesViewControllerExtension.swift */,
 				98706CF61FBF08E200620A26 /* PlaygroundStore.swift */,
 				98706CF71FBF08E200620A26 /* PlaygroundPageSessionManager.swift */,
-				98706CF81FBF08E200620A26 /* IpadUIImageExtension.swift */,
+				98706CF81FBF08E200620A26 /* UIImage+Metal.swift */,
 				98706CF91FBF08E200620A26 /* PlaygroundLiveViewSessionManager.swift */,
 			);
 			path = SourcesIpadOnly;
@@ -684,7 +684,6 @@
 				98706D201FBF08E300620A26 /* Elephants.jpg in Resources */,
 				98706CFF1FBF08E200620A26 /* Manifest.plist in Resources */,
 				98706C8A1FBF08AA00620A26 /* Assets.xcassets in Resources */,
-				98706D1B1FBF08E300620A26 /* Unicorn.png in Resources */,
 				98706D0E1FBF08E300620A26 /* Manifest.plist in Resources */,
 				98706D221FBF08E300620A26 /* Staircase.jpg in Resources */,
 				98706D181FBF08E300620A26 /* Manifest.plist in Resources */,
@@ -692,6 +691,7 @@
 				98706D0F1FBF08E300620A26 /* Manifest.plist in Resources */,
 				98706CFE1FBF08E200620A26 /* Manifest.plist in Resources */,
 				98706D1C1FBF08E300620A26 /* Glossary.plist in Resources */,
+				98706D591FBF653000620A26 /* Unicorn.jpg in Resources */,
 				98706D0B1FBF08E300620A26 /* Manifest.plist in Resources */,
 				98706C881FBF08AA00620A26 /* Main.storyboard in Resources */,
 				98706D1F1FBF08E300620A26 /* cover.png in Resources */,
@@ -737,7 +737,7 @@
 				98706D2A1FBF08E300620A26 /* UIBezierPathExtension.swift in Sources */,
 				98706D251FBF08E300620A26 /* CalculationView.swift in Sources */,
 				98706D241FBF08E300620A26 /* Constants.swift in Sources */,
-				98706D3F1FBF08E300620A26 /* IpadUIImageExtension.swift in Sources */,
+				98706D3F1FBF08E300620A26 /* UIImage+Metal.swift in Sources */,
 				98706D381FBF08E300620A26 /* AnimationQueue.swift in Sources */,
 				98706D321FBF08E300620A26 /* ShowImageViewController.swift in Sources */,
 				98706D371FBF08E300620A26 /* Fraction.swift in Sources */,
