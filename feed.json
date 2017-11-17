@@ -31,7 +31,7 @@
 					"https://raw.githubusercontent.com/lennet/image-filtering/master/Screenshots/Screenshot2.png"
 			],
 			"title": "Image Filtering",
-			"contentVersion": "1.0.3",
+			"contentVersion": "1.0.1",
 			"lastUpdatedDate": "2017-11-14T12:00:00+00:00",
 			"contentIdentifier": "com.leonardthomas.imagefilter",
 			"sha512": "8a4119991fabdf6e2399aec359b4da1ba157e683b32513ee93c2ba2bf1b9c73a24fb6f5d36da13fd4459e5e4b5f884802c71a497bd74cfe1757acbf97caf88af",
