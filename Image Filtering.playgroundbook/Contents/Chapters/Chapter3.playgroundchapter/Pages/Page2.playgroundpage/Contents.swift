@@ -40,7 +40,7 @@ PlaygroundPage.current.proxy?.send(.string(Constants.resetKey))
     
  While the Sobel operator only works in a particular direction, there are also alternative kernels that take the derivation of all directions into account. One of them is the Laplacian of Gaussian filter which is a combination of the [Laplacian operator](glossary://Laplace%20operator) and Gaussian distribution functions and therefore uses similar parameters as the Gaussian filter.
  
- ![Laplcian of Gaussian plot](private/laplacianofgaussian.png)
+ ![Laplcian of Gaussian plot](laplacianofgaussian.png)
 */
 let kernelSize = 27
 let stdDeviation: Float = kernelSize/6

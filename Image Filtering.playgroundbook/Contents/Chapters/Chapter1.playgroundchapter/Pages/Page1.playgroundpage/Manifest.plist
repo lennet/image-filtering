@@ -6,8 +6,6 @@
 	<string>Off</string>
 	<key>LiveViewEdgeToEdge</key>
 	<true/>
-	<key>Version</key>
-	<string>1.0</string>
 	<key>Name</key>
 	<string>Images, Filters &amp; Convolution</string>
 	<key>LiveViewMode</key>

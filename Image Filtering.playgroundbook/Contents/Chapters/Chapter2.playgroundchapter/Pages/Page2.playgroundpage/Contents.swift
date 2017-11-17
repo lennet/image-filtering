@@ -54,7 +54,7 @@ let gaussianFilter: Kernel = .gaussian(size: kernelSize, sigma: stdDeviation)
 /*:
  The Gaussian filter is an implementation of the [Gaussian distribution function](glossary://Gaussian%20distribution) which has it's biggest values in the center and decreases depending on the standard deviation variable sigma.
  
- ![Gaussian plot](private/gaussian.png)
+ ![Gaussian plot](gaussian.png)
  * Note:
     Debug-quicklooks might help to get a better understanding of a filter kernel. Tap one the icon next to your kernel variable after you've run the playground once to get a numeric representation or visual representation for filter kernel which have a kernel size of greater than 9
 */

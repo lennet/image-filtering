@@ -237,9 +237,10 @@
 		98706C961FBF08E200620A26 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
+				98706CD11FBF08E200620A26 /* PrivateResources */,
 				98706C971FBF08E200620A26 /* Manifest.plist */,
 				98706C981FBF08E200620A26 /* Chapters */,
-				98706CCC1FBF08E200620A26 /* Resources */,
+				98706CCC1FBF08E200620A26 /* PublicResources */,
 				98706CD71FBF08E200620A26 /* Sources */,
 			);
 			name = Contents;
@@ -280,27 +281,19 @@
 			isa = PBXGroup;
 			children = (
 				98706C9D1FBF08E200620A26 /* Manifest.plist */,
-				98706C9E1FBF08E200620A26 /* Resources */,
+				98706C9E1FBF08E200620A26 /* PrivateResources */,
 				98706CA11FBF08E200620A26 /* Contents.swift */,
 				98706CA21FBF08E200620A26 /* LiveView.swift */,
 			);
 			path = Page2.playgroundpage;
 			sourceTree = "<group>";
 		};
-		98706C9E1FBF08E200620A26 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				98706C9F1FBF08E200620A26 /* private */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		98706C9F1FBF08E200620A26 /* private */ = {
+		98706C9E1FBF08E200620A26 /* PrivateResources */ = {
 			isa = PBXGroup;
 			children = (
 				98706CA01FBF08E200620A26 /* gaussian@2x.png */,
 			);
-			path = private;
+			path = PrivateResources;
 			sourceTree = "<group>";
 		};
 		98706CA31FBF08E200620A26 /* Page1.playgroundpage */ = {
@@ -335,27 +328,19 @@
 			isa = PBXGroup;
 			children = (
 				98706CAB1FBF08E200620A26 /* Manifest.plist */,
-				98706CAC1FBF08E200620A26 /* Resources */,
+				98706CAC1FBF08E200620A26 /* PrivateResources */,
 				98706CAF1FBF08E200620A26 /* Contents.swift */,
 				98706CB01FBF08E200620A26 /* LiveView.swift */,
 			);
 			path = Page2.playgroundpage;
 			sourceTree = "<group>";
 		};
-		98706CAC1FBF08E200620A26 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				98706CAD1FBF08E200620A26 /* private */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		98706CAD1FBF08E200620A26 /* private */ = {
+		98706CAC1FBF08E200620A26 /* PrivateResources */ = {
 			isa = PBXGroup;
 			children = (
 				98706CAE1FBF08E200620A26 /* laplacianofgaussian@2x.png */,
 			);
-			path = private;
+			path = PrivateResources;
 			sourceTree = "<group>";
 		};
 		98706CB11FBF08E200620A26 /* Page1.playgroundpage */ = {
@@ -415,20 +400,20 @@
 			isa = PBXGroup;
 			children = (
 				98706CBF1FBF08E200620A26 /* Manifest.plist */,
-				98706CC01FBF08E200620A26 /* Resources */,
+				98706CC01FBF08E200620A26 /* PrivateResources */,
 				98706CC31FBF08E200620A26 /* Contents.swift */,
 				98706CC41FBF08E200620A26 /* LiveView.swift */,
 			);
 			path = Page1.playgroundpage;
 			sourceTree = "<group>";
 		};
-		98706CC01FBF08E200620A26 /* Resources */ = {
+		98706CC01FBF08E200620A26 /* PrivateResources */ = {
 			isa = PBXGroup;
 			children = (
 				98706CC11FBF08E200620A26 /* ConvolutionEquationEmojified.png */,
 				98706CC21FBF08E200620A26 /* ConvolutionEquation.png */,
 			);
-			path = Resources;
+			path = PrivateResources;
 			sourceTree = "<group>";
 		};
 		98706CC51FBF08E200620A26 /* Chapter4.playgroundchapter */ = {
@@ -458,28 +443,27 @@
 			path = Page1.playgroundpage;
 			sourceTree = "<group>";
 		};
-		98706CCC1FBF08E200620A26 /* Resources */ = {
+		98706CCC1FBF08E200620A26 /* PublicResources */ = {
 			isa = PBXGroup;
 			children = (
 				98706D581FBF653000620A26 /* Unicorn.jpg */,
-				98706CCE1FBF08E200620A26 /* Glossary.plist */,
 				98706CCF1FBF08E200620A26 /* Camel.jpg */,
 				98706CD01FBF08E200620A26 /* Akropolis.jpg */,
-				98706CD11FBF08E200620A26 /* Private */,
 				98706CD31FBF08E200620A26 /* Elephants.jpg */,
 				98706CD41FBF08E200620A26 /* Studying.jpg */,
 				98706CD51FBF08E200620A26 /* Staircase.jpg */,
 				98706CD61FBF08E200620A26 /* Vinyl.jpg */,
 			);
-			path = Resources;
+			path = PublicResources;
 			sourceTree = "<group>";
 		};
-		98706CD11FBF08E200620A26 /* Private */ = {
+		98706CD11FBF08E200620A26 /* PrivateResources */ = {
 			isa = PBXGroup;
 			children = (
+				98706CCE1FBF08E200620A26 /* Glossary.plist */,
 				98706CD21FBF08E200620A26 /* cover.png */,
 			);
-			path = Private;
+			path = PrivateResources;
 			sourceTree = "<group>";
 		};
 		98706CD71FBF08E200620A26 /* Sources */ = {

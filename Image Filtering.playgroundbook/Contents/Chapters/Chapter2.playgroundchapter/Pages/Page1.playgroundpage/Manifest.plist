@@ -4,8 +4,6 @@
 <dict>
 	<key>LiveViewEdgeToEdge</key>
 	<true/>
-	<key>Version</key>
-	<string>1.0</string>
 	<key>Name</key>
 	<string>Box filter</string>
 	<key>LiveViewMode</key>
