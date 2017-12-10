@@ -12,19 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let image = #imageLiteral(resourceName: "Camel.jpg")
-        
-        let result = image.convolve(with: .gaussian(size: 1001, sigma: 101/6))
-        
-        
+
+        let result = image.convolve(with: .gaussian(size: 1001, sigma: 101 / 6))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-

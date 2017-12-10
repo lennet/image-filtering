@@ -3,7 +3,7 @@ import UIKit
 public class ImageView: DrawingView {
 
     public var image: [UIColor]
-    
+
     override var drawingColors: [UIColor] {
         return image
     }
@@ -11,14 +11,11 @@ public class ImageView: DrawingView {
     public init(image: [UIColor]) {
         self.image = image
         super.init(frame: .zero)
-        self.contentWidth = CGFloat(Int(sqrt(Double(self.image.count))))
+        contentWidth = CGFloat(Int(sqrt(Double(self.image.count))))
         updateSize()
-        
     }
-    
-    required public init(coder aDecoder: NSCoder) {
+
+    public required init(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
-

@@ -15,7 +15,7 @@ extension UIView: LiveViewable {}
 extension UIViewController: LiveViewable {}
 
 public enum AssesmentStatus {
-    case fail(hints:[String],solution: String?)
+    case fail(hints: [String], solution: String?)
     case pass(message: String)
 }
 
@@ -28,7 +28,6 @@ public class PlaygroundPage {
 }
 
 public protocol PlaygroundRemoteLiveViewProxyDelegate {
-    
 }
 
 public class PlaygroundRemoteLiveViewProxy {
@@ -47,12 +46,11 @@ public enum PlaygroundValue {
 
 public class PlaygroundKeyValueStore {
     public static var current = PlaygroundKeyValueStore()
-    public subscript(parameter: String) -> PlaygroundValue? {
+    public subscript(_: String) -> PlaygroundValue? {
         get {
             return nil
         }
         set {
-            
         }
     }
 }
@@ -62,5 +60,5 @@ public protocol PlaygroundLiveViewMessageHandler {
 }
 
 extension PlaygroundLiveViewMessageHandler {
-    public func send(_ message: PlaygroundValue) {}
+    public func send(_: PlaygroundValue) {}
 }

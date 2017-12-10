@@ -13,7 +13,7 @@ public class CompareImagesViewController: UIViewController {
 
         stackView = UIStackView()
         stackView.backgroundColor = .white
-        
+
         let margin: CGFloat = 80
         stackView.frame = CGRect(x: margin, y: margin, width: view.size.width - (2 * margin), height: view.size.height - (2 * margin))
 
@@ -33,12 +33,10 @@ public class CompareImagesViewController: UIViewController {
     }
 
     public func reset() {
-        childViewControllers.forEach{
+        childViewControllers.forEach {
             stackView.removeArrangedSubview($0.view)
             $0.view.removeFromSuperview()
             $0.removeFromParentViewController()
         }
     }
-
 }
-

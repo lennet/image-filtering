@@ -6,28 +6,24 @@ public enum Interpolation {
 }
 
 extension UIBezierPath {
-    
+
     public convenience init(points: [CGPoint], interpolation: Interpolation) {
         self.init()
         switch interpolation {
         case .none:
             points.forEach {
-                addLine(from: CGPoint(x: $0.x , y:0), to: $0)
+                addLine(from: CGPoint(x: $0.x, y: 0), to: $0)
             }
             break
         case .linear:
             move(to: .zero)
-            points.forEach{ addLine(to: $0) }
+            points.forEach { addLine(to: $0) }
             break
-            
         }
     }
-    
-    public func addLine(from: CGPoint, to:CGPoint) {
-        self.move(to: from)
-        self.addLine(to: to)
+
+    public func addLine(from: CGPoint, to: CGPoint) {
+        move(to: from)
+        addLine(to: to)
     }
-    
 }
-
-

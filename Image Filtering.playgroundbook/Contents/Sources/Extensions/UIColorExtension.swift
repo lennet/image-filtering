@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIColor {
-    
+
     public var components: (red: Float, green: Float, blue: Float, alpha: Float) {
         let cgColor = self.cgColor
         let comps = cgColor.components
@@ -13,26 +13,24 @@ extension UIColor {
         default:
             break
         }
-        return (red:0, green: 0, blue: 0, alpha: 0)
+        return (red: 0, green: 0, blue: 0, alpha: 0)
     }
-    
+
     public convenience init(hexValue: Int) {
         let red = CGFloat((hexValue & 0xFF0000) >> 16) / 255.0
         let green = CGFloat((hexValue & 0xFF00) >> 8) / 255.0
         let blue = CGFloat(hexValue & 0xFF) / 255.0
-        self.init(red:red, green:green, blue:blue, alpha: 1)
+        self.init(red: red, green: green, blue: blue, alpha: 1)
     }
-    
+
     public var hexValue: Int {
-        return (Int)(components.red*255)<<16 | (Int)(components.green*255)<<8 | (Int)(components.blue*255)<<0
+        return (Int)(components.red * 255) << 16 | Int(components.green * 255) << 8 | Int(components.blue * 255) << 0
     }
-    
 }
 
 extension Array where Element == UIColor {
 
     public var asHexArray: [Int] {
-        return self.map{ $0.hexValue }
+        return map { $0.hexValue }
     }
-    
 }

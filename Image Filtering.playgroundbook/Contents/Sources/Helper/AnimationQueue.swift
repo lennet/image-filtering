@@ -1,21 +1,21 @@
 import UIKit
 
-public typealias completionBlock = (Bool) -> ()
-public typealias animationBlock = () -> ()
+public typealias completionBlock = (Bool) -> Void
+public typealias animationBlock = () -> Void
 
 public protocol Animtable {
-    func animate(completion: @escaping () -> ())
+    func animate(completion: @escaping () -> Void)
     var animation: animationBlock { get }
 }
 
 public struct Animation: Animtable {
     var duration: TimeInterval
     var completion: completionBlock?
-    
+
     public var animation: animationBlock
-    
+
     public func animate(completion: @escaping animationBlock) {
-        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseInOut, animations: animation) { (success) in
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseInOut, animations: animation) { success in
             completion()
             self.completion?(success)
         }
@@ -23,7 +23,7 @@ public struct Animation: Animtable {
 }
 
 extension Animation {
-    public init(duration:TimeInterval, animation: @escaping animationBlock, completion: completionBlock? = nil) {
+    public init(duration: TimeInterval, animation: @escaping animationBlock, completion: completionBlock? = nil) {
         self.duration = duration
         self.animation = animation
         self.completion = completion
@@ -31,9 +31,9 @@ extension Animation {
 }
 
 public struct Transition: Animtable {
-    
+
     public var animation: animationBlock {
-        
+
         return {
             let superView = self.fromView.superview
             self.fromView.removeFromSuperview()
@@ -46,16 +46,15 @@ public struct Transition: Animtable {
     var duration: Double
     var mode: UIViewAnimationOptions
     var completion: completionBlock?
-    
+
     public func animate(completion: @escaping animationBlock) {
-        UIView.transition(from: fromView, to: toView, duration: duration, options: mode) { (success) in
+        UIView.transition(from: fromView, to: toView, duration: duration, options: mode) { success in
             completion()
             self.completion?(success)
         }
-        
     }
-    
-    public init(fromView: UIView, toView: UIView, duration: Double, mode: UIViewAnimationOptions, forceDuration: Bool, completion: completionBlock? = nil) {
+
+    public init(fromView: UIView, toView: UIView, duration: Double, mode: UIViewAnimationOptions, forceDuration _: Bool, completion: completionBlock? = nil) {
         self.fromView = fromView
         self.toView = toView
         self.duration = duration
@@ -65,7 +64,7 @@ public struct Transition: Animtable {
 }
 
 public class AnimationQueue {
-    
+
     var isRunning: Bool = true {
         didSet {
             if isRunning && oldValue != isRunning {
@@ -73,47 +72,43 @@ public class AnimationQueue {
             }
         }
     }
-    
+
     private var animations: [Animtable] = []
-    
+
     public init() {
-    
     }
-    
+
     public func add<T: Animtable>(animation: T) {
         animations.append(animation)
         if animations.count == 1 {
             animateNext()
         }
-
     }
-    
-    public func addAnimation(duration: TimeInterval, animation: @escaping ()->()) {
+
+    public func addAnimation(duration: TimeInterval, animation: @escaping () -> Void) {
         let animation = Animation(duration: duration, animation: animation)
         add(animation: animation)
-        
     }
-    
+
     public func clear() {
         animations.removeAll()
     }
-    
+
     private func animateNext() {
-        
+
         guard isRunning else {
-            return 
+            return
         }
-        
+
         animations.first?.animate {
             self.removeFirstAnimation()
             self.animateNext()
         }
     }
-    
+
     private func removeFirstAnimation() {
         if !animations.isEmpty {
             animations.remove(at: 0)
         }
     }
-    
 }

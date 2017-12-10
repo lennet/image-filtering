@@ -1,7 +1,7 @@
 import UIKit
 
 extension Float {
-    
+
     public func draw(in rect: CGRect) {
         let fraction = Fraction(value: Double(self))
         if fraction.den != 1 {
@@ -10,7 +10,7 @@ extension Float {
             fraction.num.draw(in: rect)
         }
     }
-    
+
     public var asFractionString: String {
         let fraction = Fraction(value: Double(self))
         if fraction.den != 1 {
@@ -19,9 +19,8 @@ extension Float {
             return "\(fraction.num)"
         }
     }
-    
-    public static func /(left: Int, right: Float) -> Float {
-        return Float(left)/right
-    }
 
+    public static func / (left: Int, right: Float) -> Float {
+        return Float(left) / right
+    }
 }
