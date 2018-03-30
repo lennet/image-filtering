@@ -6,7 +6,6 @@ struct Fraction {
 }
 
 extension Fraction {
-
     init(value: Double) {
         let precision = 1.0e-6
         var x = value
@@ -26,9 +25,7 @@ extension Fraction {
 }
 
 extension Fraction {
-
     func draw(in rect: CGRect) {
-
         let line = UIBezierPath()
         line.lineWidth = rect.size.height / 22
         let lineMargin: CGFloat = rect.size.width / 3.5

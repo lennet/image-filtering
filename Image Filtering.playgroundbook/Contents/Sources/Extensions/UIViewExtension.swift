@@ -1,7 +1,6 @@
 import UIKit
 
 extension UIView {
-
     public func addSubViewWithFadeAnimation(view: UIView, duration: TimeInterval = 0.75, completion: ((Bool) -> Void)? = nil) {
         view.alpha = 0
         addSubview(view)
@@ -12,7 +11,6 @@ extension UIView {
     }
 
     public var origin: CGPoint {
-
         get {
             return frame.origin
         }
@@ -23,7 +21,6 @@ extension UIView {
     }
 
     public var size: CGSize {
-
         get {
             return frame.size
         }

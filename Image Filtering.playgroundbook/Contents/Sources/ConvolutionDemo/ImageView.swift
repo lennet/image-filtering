@@ -1,7 +1,6 @@
 import UIKit
 
 public class ImageView: DrawingView {
-
     public var image: [UIColor]
 
     override var drawingColors: [UIColor] {

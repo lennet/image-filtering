@@ -11,7 +11,6 @@ public enum Direction {
 }
 
 public enum Kernel {
-
     /// The Laplacian of Gaussian is a combination of the Laplacian operator and Gaussian distribution functions which detect points/ edges in all directions
     /// - parameter size: The size of the filter kernel. **Must be odd**
     /// - parameter sigma: The standard derivation of the distribution function
@@ -100,8 +99,8 @@ public enum Kernel {
     }
 }
 
+// TODO replace with CustomPlaygroundDisplayConvertible after rdar://39033403 has been fixed
 extension Kernel: CustomPlaygroundQuickLookable {
-
     public var customPlaygroundQuickLook: PlaygroundQuickLook {
         let kernelView = KernelView(kernel: rawValue)
         kernelView.backgroundColor = .white

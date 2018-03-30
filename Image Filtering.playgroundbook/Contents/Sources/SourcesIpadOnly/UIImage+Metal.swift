@@ -5,7 +5,6 @@ import PlaygroundSupport
 // this extension uses fatalError instead of thworing errors becuase they are getting displayed inline in Swift Playground on iPad
 
 extension UIImage {
-
     /// Convolves the image with a filter kernel
     /// - Complexity: Depends on the Image and Kernel size but as it uses MetalPerformanceShaders 🤘 the operation is stil fast
     /// - parameter kernel: The kernel you want to convove the image with
@@ -20,7 +19,6 @@ extension UIImage {
     }
 
     func convolve(with kernel: [Float]) -> UIImage {
-
         guard let cgImage = cgImage else {
             PlaygroundPageSessionManager.shared.showErrorMessage(hint: "Oops! Something went wrong. Please start the convolution again", solution: nil)
             fatalError("Oops! Something went wrong. Please start the convolution again")
@@ -81,7 +79,6 @@ extension UIImage {
     }
 
     convenience init(texture: MTLTexture) {
-
         let byteCount = texture.width * texture.height * 4
 
         guard let imageBytes = malloc(byteCount) else {

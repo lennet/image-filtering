@@ -1,7 +1,6 @@
 import UIKit
 
 public class CompareImagesViewController: UIViewController {
-
     var stackView: UIStackView!
 
     public override func viewWillAppear(_ animated: Bool) {

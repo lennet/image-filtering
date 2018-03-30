@@ -2,7 +2,6 @@ import Foundation
 import PlaygroundSupport
 
 public class PlaygroundPageSessionManager: PlaygroundRemoteLiveViewProxyDelegate {
-
     public static let shared = PlaygroundPageSessionManager()
 
     private init() {

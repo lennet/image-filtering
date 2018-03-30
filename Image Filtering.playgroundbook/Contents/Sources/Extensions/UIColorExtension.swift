@@ -1,7 +1,6 @@
 import UIKit
 
 extension UIColor {
-
     public var components: (red: Float, green: Float, blue: Float, alpha: Float) {
         let cgColor = self.cgColor
         let comps = cgColor.components
@@ -29,7 +28,6 @@ extension UIColor {
 }
 
 extension Array where Element == UIColor {
-
     public var asHexArray: [Int] {
         return map { $0.hexValue }
     }

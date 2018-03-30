@@ -2,7 +2,6 @@ import PlaygroundSupport
 import UIKit
 
 extension CompareImagesViewController: PlaygroundLiveViewMessageHandler {
-
     public func receive(_ message: PlaygroundValue) {
         switch message {
         case let .string(message):

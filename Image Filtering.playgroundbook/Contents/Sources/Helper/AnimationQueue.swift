@@ -31,9 +31,7 @@ extension Animation {
 }
 
 public struct Transition: Animtable {
-
     public var animation: animationBlock {
-
         return {
             let superView = self.fromView.superview
             self.fromView.removeFromSuperview()
@@ -64,7 +62,6 @@ public struct Transition: Animtable {
 }
 
 public class AnimationQueue {
-
     var isRunning: Bool = true {
         didSet {
             if isRunning && oldValue != isRunning {
@@ -95,7 +92,6 @@ public class AnimationQueue {
     }
 
     private func animateNext() {
-
         guard isRunning else {
             return
         }

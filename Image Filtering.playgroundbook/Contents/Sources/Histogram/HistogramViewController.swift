@@ -3,7 +3,6 @@ import SceneKit
 import UIKit
 
 public class HistogramViewController: UIViewController, SCNSceneRendererDelegate {
-
     let motionManager = CMMotionManager()
 
     weak var histogramView: HistogramView?

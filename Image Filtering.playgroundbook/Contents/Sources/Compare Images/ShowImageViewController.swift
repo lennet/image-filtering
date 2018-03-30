@@ -1,7 +1,6 @@
 import UIKit
 
 public class ShowImageViewController: UIViewController {
-
     var histogramViewController: HistogramViewController?
     var image: UIImage
     var imageView: UIImageView!

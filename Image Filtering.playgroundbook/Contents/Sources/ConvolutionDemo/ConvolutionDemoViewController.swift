@@ -6,7 +6,6 @@ struct ConvolutionOperation {
 }
 
 public class ConvolutionDemoViewController: UIViewController, UIGestureRecognizerDelegate {
-
     enum ConvolutionDemoState {
         case setup
         case convolving(index: Int)
@@ -234,7 +233,8 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
         }
         let size = CGSize(width: length, height: length)
 
-        let point = CGPoint(x: xOrigin, y: (view.size.height / 2) - size.height - padding / 2 - (imageView?.pixelSize ?? 0) / 2)
+        let pixelSize = imageView?.pixelSize ?? 0
+        let point = CGPoint(x: xOrigin, y: (view.size.height / 2) - size.height - padding / 2 - pixelSize / 2)
         return CGRect(origin: point, size: size)
     }
 
@@ -376,7 +376,6 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
     }
 
     func overlapKernel() {
-
         animationQueue.addAnimation(duration: kAnimationDuration) {
             self.overlapKernelLayoutChanges()
         }
@@ -406,7 +405,6 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
         }
 
         for i in Array(currentIndex ..< pixelCount) {
-
             let animation = Animation(duration: kAnimationDuration, animation: {
                 self.moveKernelToIndex(index: i)
                 self.updateCalculationView(index: i)
@@ -522,7 +520,6 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
     }
 
     func spatialConvolution(for image: [UIColor], at index: Int, with kernel: [Float]) -> ConvolutionStep {
-
         let operations = convolutionOperations(for: image, at: index, with: kernel)
 
         // the two-step calculation is needed for the CalculationView
@@ -550,7 +547,6 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
     }
 
     func convolutionOperations(for image: [UIColor], at index: Int, with kernel: [Float]) -> [ConvolutionOperation] {
-
         // todo remove dependecies from ui
         guard let imageView = self.imageView else { return [] }
         guard let flippedKernelView = self.flippedKernelView else { return [] }
@@ -559,7 +555,7 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
         let kernelWidth = Int(flippedKernelView.contentWidth)
         let currentPoint = index.asPoint(totalWidth: Int(imageWidth))
 
-        return Array(0 ..< kernel.count).flatMap {
+        return Array(0 ..< kernel.count).compactMap {
             let currentKernelPoint = $0.asPoint(totalWidth: kernelWidth)
 
             let xPos = CGFloat(currentPoint.x + currentKernelPoint.x) - CGFloat(kernelWidth / 2)

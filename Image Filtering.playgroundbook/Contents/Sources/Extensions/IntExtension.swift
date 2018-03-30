@@ -1,7 +1,6 @@
 import UIKit
 
 extension Int {
-
     public func asPoint(totalWidth: Int) -> CGPoint {
         return CGPoint(x: Int(self % totalWidth), y: Int(self / totalWidth))
     }
