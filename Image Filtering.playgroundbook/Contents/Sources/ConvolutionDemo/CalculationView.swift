@@ -70,7 +70,7 @@ public class CalculationView: UIView {
         return max(10, fontSize)
     }
 
-    var stringAttributes: [NSAttributedStringKey: Any] {
+    var stringAttributes: [NSAttributedString.Key: Any] {
         return [.font: font]
     }
 

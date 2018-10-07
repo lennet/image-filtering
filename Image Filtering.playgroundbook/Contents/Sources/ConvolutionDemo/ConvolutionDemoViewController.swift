@@ -578,7 +578,7 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
 
     // mark - UIGestureRecognizer
 
-    func handlePan(sender: UIPanGestureRecognizer, state: UIGestureRecognizerState) {
+    func handlePan(sender: UIPanGestureRecognizer, state: UIGestureRecognizer.State) {
         // a custom state parameter is needed to get all state changes
 
         guard case let .convolving(index: currentIndex) = currentState else {

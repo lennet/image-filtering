@@ -42,7 +42,7 @@ public struct Transition: Animtable {
     var fromView: UIView
     var toView: UIView
     var duration: Double
-    var mode: UIViewAnimationOptions
+    var mode: UIView.AnimationOptions
     var completion: completionBlock?
 
     public func animate(completion: @escaping animationBlock) {
@@ -52,7 +52,7 @@ public struct Transition: Animtable {
         }
     }
 
-    public init(fromView: UIView, toView: UIView, duration: Double, mode: UIViewAnimationOptions, forceDuration _: Bool, completion: completionBlock? = nil) {
+    public init(fromView: UIView, toView: UIView, duration: Double, mode: UIView.AnimationOptions, forceDuration _: Bool, completion: completionBlock? = nil) {
         self.fromView = fromView
         self.toView = toView
         self.duration = duration

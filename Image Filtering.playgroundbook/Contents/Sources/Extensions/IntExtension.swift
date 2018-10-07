@@ -10,8 +10,8 @@ extension Int {
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = .center
         let attributes = [
-            NSAttributedStringKey.font: font,
-            NSAttributedStringKey.paragraphStyle: paragraph,
+            NSAttributedString.Key.font: font,
+            NSAttributedString.Key.paragraphStyle: paragraph,
         ]
         NSAttributedString(string: "\(self)", attributes: attributes).draw(in: CGRect(origin: CGPoint(x: rect.origin.x, y: rect.origin.y + rect.height / 2 - font.lineHeight / 2), size: rect.size))
     }

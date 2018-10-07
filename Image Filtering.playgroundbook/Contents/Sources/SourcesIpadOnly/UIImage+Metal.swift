@@ -109,7 +109,8 @@ extension UIImage {
             PlaygroundPageSessionManager.shared.showErrorMessage(hint: "Oops! Something went wrong. Please start the convolution again", solution: nil)
             fatalError("Oops! Something went wrong. Please start the convolution again")
         }
-
+        
+        free(imageBytes)
         self.init(cgImage: image)
     }
 }

@@ -99,13 +99,12 @@ public enum Kernel {
     }
 }
 
-// TODO replace with CustomPlaygroundDisplayConvertible after rdar://39033403 has been fixed
-extension Kernel: CustomPlaygroundQuickLookable {
-    public var customPlaygroundQuickLook: PlaygroundQuickLook {
+extension Kernel: CustomPlaygroundDisplayConvertible {
+    public var playgroundDescription: Any {
         let kernelView = KernelView(kernel: rawValue)
         kernelView.backgroundColor = .white
         kernelView.setPixelSizeToFit(width: 200)
         kernelView.renderMode = .matrice
-        return .view(kernelView)
+        return kernelView
     }
 }
