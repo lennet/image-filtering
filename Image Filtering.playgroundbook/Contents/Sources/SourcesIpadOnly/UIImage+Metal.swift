@@ -112,7 +112,6 @@ extension UIImage {
             fatalError("Oops! Something went wrong. Please start the convolution again")
         }
         
-        free(imageBytes)
         self.init(cgImage: image)
     }
 }
