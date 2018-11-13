@@ -14,7 +14,7 @@ func display(image: UIImage) {
         return
     }
     
-    guard let data = UIImageJPEGRepresentation(image, 1) else {
+    guard let data = image.jpegData(compressionQuality: 1) else {
         return
     }
     

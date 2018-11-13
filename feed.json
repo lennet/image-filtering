@@ -14,16 +14,16 @@
 				},
 				{
 					"name": "Version:",
-					"value": "1.1"
+					"value": "1.3"
 				},
 				{
 					"type": "date",
 					"name": "Released:",
-					"value": "2017-11-14T12:00:00+00:00"
+					"value": "2018-11-13T12:00:00+00:00"
 				},
 				{
 					"name": "Languages:",
-					"value": "English",
+					"value": "English"
 				}
 			],
 			"previewImageURLs": [
@@ -31,10 +31,10 @@
 					"https://raw.githubusercontent.com/lennet/image-filtering/master/Screenshots/Screenshot2.png"
 			],
 			"title": "Image Filtering",
-			"contentVersion": "1.1",
-			"lastUpdatedDate": "2017-11-14T12:00:00+00:00",
+			"contentVersion": "1.3",
+			"lastUpdatedDate": "2018-11-13T12:00:00+00:00",
 			"contentIdentifier": "com.leonardthomas.imagefilter",
-			"sha512": "563df4c4d77bccd42037cb303ff17ebf4d56e070a6234a21df0a8d7ecfa9bfd6e3e401f56eb85e10d311ed89b71b3624206df31c3347973b7b8b596006ce81ba",
+			"sha512": "e5059fc5d5a55e509a8207ae09cb8c1f392940282e1cd4ffbabb0409240de9b4bbd8abece401f0272f846248df2e6ddcd2dbdd21fc47a52ac32d073c4fb2b5e6",
 			"difficultyLevel" : "advanced"
 		}
 	],

@@ -1,7 +1,6 @@
 import UIKit
 
 public class CompareImagesViewController: UIViewController {
-
     var stackView: UIStackView!
 
     public override func viewWillAppear(_ animated: Bool) {
@@ -27,16 +26,16 @@ public class CompareImagesViewController: UIViewController {
 
     public func addImage(image: UIImage) {
         let showImageViewController = ShowImageViewController(image: image)
-        addChildViewController(showImageViewController)
+        addChild(showImageViewController)
         stackView.addArrangedSubview(showImageViewController.view)
-        showImageViewController.didMove(toParentViewController: self)
+        showImageViewController.didMove(toParent: self)
     }
 
     public func reset() {
-        childViewControllers.forEach {
+        children.forEach {
             stackView.removeArrangedSubview($0.view)
             $0.view.removeFromSuperview()
-            $0.removeFromParentViewController()
+            $0.removeFromParent()
         }
     }
 }

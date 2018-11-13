@@ -2,7 +2,6 @@ import Foundation
 import PlaygroundSupport
 
 public class PlaygroundLiveViewSessionManager {
-
     public static let shared = PlaygroundLiveViewSessionManager()
 
     private init() {

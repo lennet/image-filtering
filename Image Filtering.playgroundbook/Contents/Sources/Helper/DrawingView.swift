@@ -1,7 +1,6 @@
 import UIKit
 
 public class DrawingView: UIView {
-
     public var contentWidth: CGFloat = 1
 
     var drawingColors: [UIColor] {
@@ -13,7 +12,6 @@ public class DrawingView: UIView {
     var pixelBorderWidth: CGFloat = 1
 
     public var l_frame: CGRect {
-
         set {
             frame = newValue
             setPixelSizeToFit(width: frame.width)

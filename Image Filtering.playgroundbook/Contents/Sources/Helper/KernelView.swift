@@ -1,7 +1,6 @@
 import UIKit
 
 public class KernelView: DrawingView {
-
     let kernel: [Float]
     let colors: [UIColor]
 
@@ -50,7 +49,6 @@ public class KernelView: DrawingView {
     }
 
     public override func draw(_ rect: CGRect) {
-
         if pixelSize < 5 || kernel.count > 100 {
             // the pixelsize is too high for the rectSize and an image version is more readable then the matrice or values
             super.draw(rect)
@@ -71,7 +69,6 @@ public class KernelView: DrawingView {
     }
 
     func drawMatrice(_ rect: CGRect) {
-
         let parenthesisWidth: CGFloat = rect.width / 15
         let height = frame.size.height
         let width = frame.size.width

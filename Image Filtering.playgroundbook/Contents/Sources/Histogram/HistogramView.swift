@@ -3,7 +3,6 @@ import SceneKit
 import UIKit
 
 public class HistogramView: SCNView {
-
     var cameraNode: SCNNode?
     var data: HistogramData!
 
@@ -74,7 +73,6 @@ public class HistogramView: SCNView {
     }
 
     func getNode(for channel: [vImagePixelCount], color: UIColor, maxValue: vImagePixelCount, zValue: Float) -> SCNNode {
-
         let size = CGSize(width: 10, height: 10)
 
         var points: [CGPoint] = channel.enumerated().map {

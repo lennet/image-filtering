@@ -17,14 +17,12 @@ public struct CalculationStep {
 }
 
 extension UIColor {
-
     public convenience init(value: RGBValue) {
         self.init(red: CGFloat(value.red), green: CGFloat(value.green), blue: CGFloat(value.blue), alpha: 1)
     }
 }
 
 public class CalculationView: UIView {
-
     public var steps: [CalculationStep] = []
     public var result: RGBValue
 
@@ -72,7 +70,7 @@ public class CalculationView: UIView {
         return max(10, fontSize)
     }
 
-    var stringAttributes: [NSAttributedStringKey: Any] {
+    var stringAttributes: [NSAttributedString.Key: Any] {
         return [.font: font]
     }
 
@@ -135,7 +133,6 @@ public class CalculationView: UIView {
     }
 
     func drawDivider() {
-
         // draw divider
         let lineLocation = CGPoint(x: 0, y: CGFloat(steps.count) * lineHeight + yOffset)
         let linePath = UIBezierPath()

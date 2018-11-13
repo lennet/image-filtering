@@ -1,8 +1,7 @@
 import UIKit.UIGestureRecognizerSubclass
 
 public class AllTouchesPanGestureRecognizer: UIPanGestureRecognizer {
-
-    public var callBack: ((_ recognizer: AllTouchesPanGestureRecognizer, _ state: UIGestureRecognizerState) -> Void)?
+    public var callBack: ((_ recognizer: AllTouchesPanGestureRecognizer, _ state: UIGestureRecognizer.State) -> Void)?
 
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesBegan(touches, with: event)

@@ -2,9 +2,7 @@ import PlaygroundSupport
 import UIKit
 
 public class PlaygroundStore {
-
     public static var hex🦄: [Int] {
-
         get {
             guard case let .array(hexPlaygroundValues)? = PlaygroundKeyValueStore.current["hex🦄"] else {
                 let unicorn = [
@@ -27,7 +25,7 @@ public class PlaygroundStore {
                 return unicorn.asHexArray
             }
 
-            let hexValues: [Int] = hexPlaygroundValues.flatMap {
+            let hexValues: [Int] = hexPlaygroundValues.compactMap {
                 if case let .integer(value) = $0 {
                     return value
                 }

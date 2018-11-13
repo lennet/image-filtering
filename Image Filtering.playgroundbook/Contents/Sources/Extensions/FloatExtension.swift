@@ -1,7 +1,6 @@
 import UIKit
 
 extension Float {
-
     public func draw(in rect: CGRect) {
         let fraction = Fraction(value: Double(self))
         if fraction.den != 1 {

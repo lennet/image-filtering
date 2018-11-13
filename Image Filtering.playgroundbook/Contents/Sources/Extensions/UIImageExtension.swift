@@ -4,9 +4,7 @@ import UIKit
 public typealias HistogramData = (red: [vImagePixelCount], blue: [vImagePixelCount], green: [vImagePixelCount], alpha: [vImagePixelCount])
 
 extension UIImage {
-
     public func getHistogramValues() -> HistogramData {
-
         guard let cgImage = cgImage else {
             return (red: [], green: [], blue: [], alpha: [])
         }

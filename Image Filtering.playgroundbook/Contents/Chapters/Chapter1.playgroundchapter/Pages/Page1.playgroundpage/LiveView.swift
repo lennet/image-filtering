@@ -32,7 +32,7 @@ extension ConvolutionDemoViewController: PlaygroundLiveViewMessageHandler {
             return
         }
 
-        let hexValues: [Int] = hexPlaygroundValues.flatMap {
+        let hexValues: [Int] = hexPlaygroundValues.compactMap {
             if case let .integer(value) = $0 {
                 return value
             }
@@ -44,7 +44,7 @@ extension ConvolutionDemoViewController: PlaygroundLiveViewMessageHandler {
             return
         }
 
-        let kernelValues: [Float] = kernelPlaygroundValue.flatMap {
+        let kernelValues: [Float] = kernelPlaygroundValue.compactMap {
             if case let .floatingPoint(value) = $0 {
                 return Float(value)
             }
