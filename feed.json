@@ -1,12 +1,25 @@
 {
+	"title": "Leonard Thomas",
+	"subtitle": "Leonard Thomas Playgroundbooks",
+	"publisherName": "Leonard Thomas",
+	"feedIdentifier": "com.leonardthomas",
+	"contactURL": "https://github.com/lennet/image-filtering",
+	"formatVersion": "1.0",	
 	"documents": [
 		{
+			"title": "Image Filtering",
+			"overviewSubtitle" : "Swift 4.2 Edition",
+			"detailSubtitle": "Learn about image filtering",
+			"description": "Many people think that digital signal processing is very complicated and quickly get deterred by mathematical formulas.  This  Playgroundbook shows that the fundamental concepts of DSP are way easier than they might look like with the example of convolving images with filter kernels.",
+			"contentIdentifier": "com.leonardthomas.imagefilter",
+			"contentVersion": "1.3",
+			"url": "https://github.com/lennet/image-filtering/releases/download/1.3/Image.Filtering.playgroundbook.zip",
 			"bannerImageURL": "https://raw.githubusercontent.com/lennet/image-filtering/master/banner_2x.png",
 			"thumbnailURL": "https://raw.githubusercontent.com/lennet/image-filtering/master/Image%20Filtering.playgroundbook/Contents/PrivateResources/cover.png",
-			"subtitle": "Learn about image filtering",
-			"description": "Many people think that digital signal processing is very complicated and quickly get deterred by mathematical formulas.  This  Playgroundbook shows that the fundamental concepts of DSP are way easier than they might look like with the example of convolving images with filter kernels.",
 			"publishedDate": "2017-11-14T12:00:00+00:00",
-			"url": "https://github.com/lennet/image-filtering/releases/download/1.1/Image.Filtering.playgroundbook.zip",
+			"lastUpdatedDate": "2018-11-13T12:00:00+00:00",
+			"sha512": "e5059fc5d5a55e509a8207ae09cb8c1f392940282e1cd4ffbabb0409240de9b4bbd8abece401f0272f846248df2e6ddcd2dbdd21fc47a52ac32d073c4fb2b5e6",
+			"difficultyLevel" : "advanced",
 			"additionalInformation": [
 				{
 					"name": "Publisher:",
@@ -29,18 +42,7 @@
 			"previewImageURLs": [
 					"https://raw.githubusercontent.com/lennet/image-filtering/master/Screenshots/Screenshot1.png",
 					"https://raw.githubusercontent.com/lennet/image-filtering/master/Screenshots/Screenshot2.png"
-			],
-			"title": "Image Filtering",
-			"contentVersion": "1.3",
-			"lastUpdatedDate": "2018-11-13T12:00:00+00:00",
-			"contentIdentifier": "com.leonardthomas.imagefilter",
-			"sha512": "e5059fc5d5a55e509a8207ae09cb8c1f392940282e1cd4ffbabb0409240de9b4bbd8abece401f0272f846248df2e6ddcd2dbdd21fc47a52ac32d073c4fb2b5e6",
-			"difficultyLevel" : "advanced"
+			]
 		}
-	],
-	"publisherName": "Leonard Thomas",
-	"title": "Leonard Thomas",
-	"formatVersion": "1.0",
-	"feedIdentifier": "com.leonardthomas",
-	"contactURL": "mailto:leo.thomas@me.com"
+	]
 }
