@@ -48,7 +48,8 @@ extension UIImage {
             width: texture.width,
             height: texture.height,
             mipmapped: false)
-
+        descriptor.usage = [.shaderWrite, .shaderRead]
+        
         guard let destination: MTLTexture = device.makeTexture(descriptor: descriptor) else {
             PlaygroundPageSessionManager.shared.showErrorMessage(hint: "Oops! Something went wrong. Please start the convolution again", solution: nil)
             fatalError("Oops! Something went wrong. Please start the convolution again")
@@ -90,6 +91,7 @@ extension UIImage {
         texture.getBytes(imageBytes, bytesPerRow: bytesPerRow, from: region, mipmapLevel: 0)
 
         let freeDataCallBack: CGDataProviderReleaseDataCallback = { (_: UnsafeMutableRawPointer?, _: UnsafeRawPointer, _: Int) -> Void in
+            return
         }
 
         guard let dataProvider = CGDataProvider(dataInfo: nil, data: imageBytes, size: byteCount, releaseData: freeDataCallBack) else {
