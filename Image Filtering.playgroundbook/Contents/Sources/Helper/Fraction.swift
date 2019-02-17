@@ -1,8 +1,8 @@
 import UIKit
 
 struct Fraction {
-    var num: Int
-    var den: Int
+    let num: Int
+    let den: Int
 }
 
 extension Fraction {

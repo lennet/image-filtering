@@ -178,7 +178,8 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
 
     var imageViewBeforeConvolutionRect: CGRect {
         let size = defaultObjectSize
-        return CGRect(x: view.center.x - size / 2 - size / 5, y: view.center.y - size / 2, width: size, height: size)
+        let halfSize = size / 2
+        return CGRect(x: view.center.x - halfSize - size / 5, y: view.center.y - halfSize, width: size, height: size)
     }
 
     var kernelStartRect: CGRect {
