@@ -233,15 +233,16 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
         }
         let size = CGSize(width: length, height: length)
 
-        let pixelSize = imageView?.pixelSize ?? 0
-        let point = CGPoint(x: xOrigin, y: (view.size.height / 2) - size.height - padding / 2 - pixelSize / 2)
+        let halfPixelSize = (imageView?.pixelSize ?? 0) / 2
+        let point = CGPoint(x: xOrigin, y: (view.size.height / 2) - size.height - padding / 2 - halfPixelSize)
         return CGRect(origin: point, size: size)
     }
 
     var resultViewShowingCalculationViewRect: CGRect {
         var rect = imageViewShowingCalculationViewRect
         let padding: CGFloat = 10
-        rect.origin.y = (view.size.height / 2) + padding / 2 + (imageView?.pixelSize ?? 0) / 2
+        let halfPixelSize = (imageView?.pixelSize ?? 0) / 2
+        rect.origin.y = (view.size.height / 2) + padding / 2 + halfPixelSize
         return rect
     }
 
