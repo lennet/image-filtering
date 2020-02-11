@@ -45,7 +45,7 @@ public enum Kernel {
             var sum: Float = 0
             let unnormalizedLaplacian: [Float] = (1 ... totalLength).map { x in
                 let point = x.asPoint(totalWidth: size)
-                let rad = (pow((Float(point.x) - mean), 2) + pow((Float(point.y + 1) - mean), 2)) / (2 * squaredSigma)
+                let rad = (pow(Float(point.x) - mean, 2) + pow(Float(point.y + 1) - mean, 2)) / (2 * squaredSigma)
 
                 let result = -fixedWeight * (1 - rad) * exp(-rad)
                 sum += abs(result)
@@ -74,7 +74,7 @@ public enum Kernel {
             var sum: Float = 0
             let unnormalizedGaussian: [Float] = (1 ... totalLength).map { x in
                 let point = x.asPoint(totalWidth: size)
-                let rad = (pow((Float(point.x) - mean), 2) + pow((Float(point.y + 1) - mean), 2)) / (2 * squaredSigma)
+                let rad = (pow(Float(point.x) - mean, 2) + pow(Float(point.y + 1) - mean, 2)) / (2 * squaredSigma)
 
                 let result = fixedWeight * exp(-rad)
                 sum += result

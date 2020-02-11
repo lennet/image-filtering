@@ -10,13 +10,11 @@ extension CompareImagesViewController: PlaygroundLiveViewMessageHandler {
             }
 
             reset()
-            break
         case let .data(messageValue):
             guard let image = UIImage(data: messageValue) else {
                 return
             }
             addImage(image: image)
-            break
         default:
             break
         }

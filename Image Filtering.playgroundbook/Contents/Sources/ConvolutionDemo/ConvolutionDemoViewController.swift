@@ -17,13 +17,11 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
             switch currentState {
             case .setup:
                 animationQueue.isRunning = true
-                break
             case .convolving(index: _):
                 //                animationQueue.isRunning = false
                 break
             case .finished:
                 animationQueue.isRunning = true
-                break
             }
         }
     }
@@ -136,7 +134,6 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
             }
             layoutResultImageView()
             layoutKernelStart()
-            break
         case let .convolving(index: index):
             overlapKernelLayoutChanges()
             layoutResultImageView()
@@ -146,10 +143,8 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
                 layoutForCalculationView()
             }
 
-            break
         case .finished:
             layoutResultImageView()
-            break
         }
 
         oldSize = view.size
@@ -298,7 +293,7 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
             resultImageView?.removeFromSuperview()
         }
 
-        let whiteImage = Array<UIColor>(repeating: .white, count: imageView.image.count)
+        let whiteImage = [UIColor](repeating: .white, count: imageView.image.count)
         let newResultImageView = ImageView(image: whiteImage)
         newResultImageView.showPixelBorder = true
         newResultImageView.alpha = 0
@@ -397,7 +392,7 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
         guard let imageView = self.imageView else { return }
         let pixelCount = imageView.image.count
 
-        convolutionSteps = (0 ..< pixelCount).map { return self.spatialConvolution(for: imageView.image, at: $0, with: self.kernel) }
+        convolutionSteps = (0 ..< pixelCount).map { self.spatialConvolution(for: imageView.image, at: $0, with: self.kernel) }
 
         var currentIndex: Int
         if case let .convolving(index) = currentState {
@@ -444,7 +439,7 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
     }
 
     func updateResultImage(index: Int) {
-        guard convolutionSteps.count > 0 else { return }
+        guard !convolutionSteps.isEmpty else { return }
         resultImageView?.image = tmpResultImage(index: index, steps: convolutionSteps)
         currentState = .convolving(index: index)
         resultImageView?.setNeedsDisplay()
@@ -534,7 +529,7 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
         }
 
         let result = resultValues.reduce(RGBValue(red: 0, green: 0, blue: 0)) { (result, resultValue) -> RGBValue in
-            return RGBValue(red: result.red + resultValue.red, green: result.green + resultValue.green, blue: result.blue + resultValue.blue)
+            RGBValue(red: result.red + resultValue.red, green: result.green + resultValue.green, blue: result.blue + resultValue.blue)
         }
 
         let steps: [CalculationStep] = operations.enumerated().map {
@@ -563,7 +558,7 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
             let xPos = CGFloat(currentPoint.x + currentKernelPoint.x) - CGFloat(kernelWidth / 2)
             let yPos = CGFloat(currentPoint.y + currentKernelPoint.y) - CGFloat(kernelWidth / 2)
 
-            guard xPos >= 0 && xPos < CGFloat(imageWidth) && yPos >= 0 && yPos < CGFloat(imageWidth) else {
+            guard xPos >= 0, xPos < CGFloat(imageWidth), yPos >= 0, yPos < CGFloat(imageWidth) else {
                 return nil
             }
 
@@ -591,7 +586,6 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
         case .began:
             animationQueue.isRunning = false
             moveContentForResultView()
-            break
         case .changed:
             guard showDetailedCalulation else { return }
             let translation = sender.translation(in: view)
@@ -605,32 +599,24 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
             switch panDirection {
             case .left:
                 currentPoint.x -= 1
-                break
             case .topLeft:
                 currentPoint.x -= 1
                 currentPoint.y += 1
-                break
             case .top:
                 currentPoint.y += 1
-                break
             case .topRight:
                 currentPoint.x += 1
                 currentPoint.y += 1
-                break
             case .right:
                 currentPoint.x += 1
-                break
             case .bottomRight:
                 currentPoint.x += 1
                 currentPoint.y -= 1
-                break
             case .bottom:
                 currentPoint.y -= 1
-                break
             case .bottomLeft:
                 currentPoint.x -= 1
                 currentPoint.y -= 1
-                break
             case .none:
                 break
             }
@@ -649,7 +635,6 @@ public class ConvolutionDemoViewController: UIViewController, UIGestureRecognize
             moveContentFromResultView()
             setupAnimationQueueForConvolution()
             animationQueue.isRunning = true
-            break
         default:
             break
         }

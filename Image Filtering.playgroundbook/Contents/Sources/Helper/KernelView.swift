@@ -58,13 +58,10 @@ public class KernelView: DrawingView {
         switch renderMode {
         case .image:
             super.draw(rect)
-            break
         case .values:
             drawValues(rect)
-            break
         case .matrice:
             drawMatrice(rect)
-            break
         }
     }
 

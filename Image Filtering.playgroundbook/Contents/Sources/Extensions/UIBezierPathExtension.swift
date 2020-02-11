@@ -13,11 +13,9 @@ extension UIBezierPath {
             points.forEach {
                 addLine(from: CGPoint(x: $0.x, y: 0), to: $0)
             }
-            break
         case .linear:
             move(to: .zero)
             points.forEach { addLine(to: $0) }
-            break
         }
     }
 

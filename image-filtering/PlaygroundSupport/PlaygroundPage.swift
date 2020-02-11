@@ -27,8 +27,7 @@ public class PlaygroundPage {
     public func finishExecution() {}
 }
 
-public protocol PlaygroundRemoteLiveViewProxyDelegate {
-}
+public protocol PlaygroundRemoteLiveViewProxyDelegate {}
 
 public class PlaygroundRemoteLiveViewProxy {
     public var delegate: Any?
@@ -50,8 +49,7 @@ public class PlaygroundKeyValueStore {
         get {
             return nil
         }
-        set {
-        }
+        set {}
     }
 }
 

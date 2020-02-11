@@ -9,10 +9,17 @@ public protocol Animtable {
 }
 
 public struct Animation: Animtable {
+    
     var duration: TimeInterval
     var completion: completionBlock?
 
     public var animation: animationBlock
+
+    public init(duration: TimeInterval, completion: completionBlock?, animation: @escaping animationBlock) {
+        self.duration = duration
+        self.completion = completion
+        self.animation = animation
+    }
 
     public func animate(completion: @escaping animationBlock) {
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseInOut, animations: animation) { success in
@@ -64,7 +71,7 @@ public struct Transition: Animtable {
 public class AnimationQueue {
     var isRunning: Bool = true {
         didSet {
-            if isRunning && oldValue != isRunning {
+            if isRunning, oldValue != isRunning {
                 animateNext()
             }
         }
@@ -72,8 +79,7 @@ public class AnimationQueue {
 
     private var animations: [Animtable] = []
 
-    public init() {
-    }
+    public init() {}
 
     public func add<T: Animtable>(animation: T) {
         animations.append(animation)

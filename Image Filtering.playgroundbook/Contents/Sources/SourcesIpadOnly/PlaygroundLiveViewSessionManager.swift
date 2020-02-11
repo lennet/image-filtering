@@ -4,8 +4,7 @@ import PlaygroundSupport
 public class PlaygroundLiveViewSessionManager {
     public static let shared = PlaygroundLiveViewSessionManager()
 
-    private init() {
-    }
+    private init() {}
 
     public func sendError(hint: String, solution: String) {
         let messageValue = PlaygroundValue.dictionary([

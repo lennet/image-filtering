@@ -4,8 +4,7 @@ import PlaygroundSupport
 public class PlaygroundPageSessionManager: PlaygroundRemoteLiveViewProxyDelegate {
     public static let shared = PlaygroundPageSessionManager()
 
-    private init() {
-    }
+    private init() {}
 
     public func setup() {
         PlaygroundPage.current.proxy?.delegate = self
@@ -56,6 +55,5 @@ public class PlaygroundPageSessionManager: PlaygroundRemoteLiveViewProxyDelegate
         PlaygroundPage.current.finishExecution()
     }
 
-    public func remoteLiveViewProxyConnectionClosed(_: PlaygroundRemoteLiveViewProxy) {
-    }
+    public func remoteLiveViewProxyConnectionClosed(_: PlaygroundRemoteLiveViewProxy) {}
 }

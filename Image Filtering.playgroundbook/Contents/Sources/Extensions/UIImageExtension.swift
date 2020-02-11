@@ -14,10 +14,12 @@ extension UIImage {
             bitsPerPixel: 32,
             colorSpace: nil,
             bitmapInfo: CGBitmapInfo(
-                rawValue: CGImageAlphaInfo.premultipliedLast.rawValue),
+                rawValue: CGImageAlphaInfo.premultipliedLast.rawValue
+            ),
             version: 0,
             decode: nil,
-            renderingIntent: .defaultIntent)
+            renderingIntent: .defaultIntent
+        )
 
         var inBuffer: vImage_Buffer = vImage_Buffer()
 
@@ -26,12 +28,13 @@ extension UIImage {
             &format,
             nil,
             cgImage,
-            UInt32(kvImageNoFlags))
+            UInt32(kvImageNoFlags)
+        )
 
-        let red = Array<vImagePixelCount>(repeatElement(0, count: 256))
-        let green = Array<vImagePixelCount>(repeatElement(0, count: 256))
-        let blue = Array<vImagePixelCount>(repeatElement(0, count: 256))
-        let alpha = Array<vImagePixelCount>(repeatElement(0, count: 256))
+        let red = [vImagePixelCount](repeatElement(0, count: 256))
+        let green = [vImagePixelCount](repeatElement(0, count: 256))
+        let blue = [vImagePixelCount](repeatElement(0, count: 256))
+        let alpha = [vImagePixelCount](repeatElement(0, count: 256))
 
         let histogram = UnsafeMutablePointer<UnsafeMutablePointer<vImagePixelCount>?>.allocate(capacity: 4)
         histogram[0] = UnsafeMutablePointer<vImagePixelCount>(mutating: red)

@@ -44,7 +44,7 @@ public class DrawingView: UIView {
         pixelBorderColor.setStroke()
         context?.setLineWidth(pixelBorderWidth)
 
-        drawingColors.enumerated().forEach({ index, color in
+        drawingColors.enumerated().forEach { index, color in
             color.setFill()
             let currentPoint = index.asPoint(totalWidth: Int(contentWidth))
 
@@ -54,7 +54,6 @@ public class DrawingView: UIView {
             if showPixelBorder {
                 context?.stroke(currentRect)
             }
-
-        })
+        }
     }
 }
