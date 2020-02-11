@@ -8,17 +8,16 @@
 	"documents": [
 		{
 			"title": "Image Filtering",
-			"overviewSubtitle" : "Swift 4.2 Edition",
+			"overviewSubtitle" : "Swift 5 Edition",
 			"detailSubtitle": "Learn about image filtering",
 			"description": "Many people think that digital signal processing is very complicated and quickly get deterred by mathematical formulas.  This  Playgroundbook shows that the fundamental concepts of DSP are way easier than they might look like with the example of convolving images with filter kernels.",
 			"contentIdentifier": "com.leonardthomas.imagefilter",
-			"contentVersion": "1.3",
-			"url": "https://github.com/lennet/image-filtering/releases/download/1.3/Image.Filtering.playgroundbook.zip",
+			"contentVersion": "1.4",
+			"url": "https://github.com/lennet/image-filtering/releases/download/1.4/Image.Filtering.playgroundbook.zip",
 			"bannerImageURL": "https://raw.githubusercontent.com/lennet/image-filtering/master/banner_2x.png",
 			"thumbnailURL": "https://raw.githubusercontent.com/lennet/image-filtering/master/Image%20Filtering.playgroundbook/Contents/PrivateResources/cover.png",
 			"publishedDate": "2017-11-14T12:00:00+00:00",
 			"lastUpdatedDate": "2018-11-13T12:00:00+00:00",
-			"sha512": "e5059fc5d5a55e509a8207ae09cb8c1f392940282e1cd4ffbabb0409240de9b4bbd8abece401f0272f846248df2e6ddcd2dbdd21fc47a52ac32d073c4fb2b5e6",
 			"difficultyLevel" : "advanced",
 			"additionalInformation": [
 				{
@@ -27,7 +26,7 @@
 				},
 				{
 					"name": "Version:",
-					"value": "1.3"
+					"value": "1.4"
 				},
 				{
 					"type": "date",
