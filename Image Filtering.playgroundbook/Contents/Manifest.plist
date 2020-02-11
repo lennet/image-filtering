@@ -7,11 +7,11 @@
 	<key>ImageReference</key>
 	<string>cover.png</string>
 	<key>SwiftVersion</key>
-	<string>4.2</string>
+	<string>5.0</string>
 	<key>Version</key>
 	<string>4.0</string>
 	<key>ContentVersion</key>
-	<string>1.3</string>
+	<string>1.4.1</string>
 	<key>Name</key>
 	<string>Image Filtering</string>
 	<key>ContentIdentifier</key>
