@@ -4,7 +4,7 @@
 	"publisherName": "Leonard Thomas",
 	"feedIdentifier": "com.leonardthomas",
 	"contactURL": "https://github.com/lennet/image-filtering",
-	"formatVersion": "1.0",	
+	"formatVersion": "1.2",	
 	"documents": [
 		{
 			"title": "Image Filtering",
@@ -18,6 +18,7 @@
 			"thumbnailURL": "https://raw.githubusercontent.com/lennet/image-filtering/master/Image%20Filtering.playgroundbook/Contents/PrivateResources/cover.png",
 			"publishedDate": "2017-11-14T12:00:00+00:00",
 			"lastUpdatedDate": "2018-11-13T12:00:00+00:00",
+			"sha512": "05f1ae8a67e226a09ac4d204a10d89b4367cf2e75f798dcf98bf6077ba396c520698281762a9f4841fd88c9d4f090aad1a8e909793b4ea7a23e5e3bb13649072",
 			"difficultyLevel" : "advanced",
 			"additionalInformation": [
 				{
@@ -31,7 +32,7 @@
 				{
 					"type": "date",
 					"name": "Released:",
-					"value": "2018-11-13T12:00:00+00:00"
+					"value": "2020-02-11T12:00:00+00:00"
 				},
 				{
 					"name": "Languages:",
